@@ -51,7 +51,7 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 				
-		      <tr onmouseout="volrecon_stop()" onmouseover="volrecon_start()">
+            <tr onmouseout="volrecon_stop()" onmouseover="volrecon_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='volrecon_image'>
@@ -87,7 +87,48 @@
               <a href="https://github.com/YanhaoWu/STSSL/">Code</a>
               <p></p>
             </td>
-          </tr>   
+          </tr>
+
+
+            <tr onmouseout="ICLR_stop()" onmouseover="ICLR_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='ICLR_image'>
+                  <img src='images/ICLR2024_before.png' width="160"></div>
+                <img src='images/ICLR2024_after.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function ICLR_start() {
+                  document.getElementById('ICLR_image').style.opacity = "1";
+                }
+
+                function ICLR_stop() {
+                  document.getElementById('ICLR_image').style.opacity = "0";
+                }
+                ICLR_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://openreview.net/forum?id=WQYHbr36Fo">
+                <papertitle>Mind Your Augmentation: The Key to Decoupling Dense Self-Supervised Learning</papertitle>
+              </a>
+              <br>
+              Congpei Qiu
+              Tong Zhang,
+              <strong>Yanhao Wu </strong>,
+              Wei Ke,
+              Mathieu Salzmann
+              Sabine Süsstrunk
+              <br>
+              <em>CVPR</em>, 2023
+              <br>
+              <a href="https://openreview.net/forum?id=WQYHbr36Fo">Paper</a> /
+<!--              <a href="https://YanhaoWu.github.io/STSSL/">Project Page</a> /-->
+<!--              <a href="https://github.com/YanhaoWu/STSSL/">Code</a>-->
+              <p></p>
+            </td>
+          </tr>
+
 
         </tbody></table>
 
