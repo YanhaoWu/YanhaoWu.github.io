@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content=" Spatiotemporal Self-supervised Learning for Point Clouds in the Wild ">
-  <meta name="keywords" content="Self-supervised Learning, Point Cloud, Segmentation">
+        content=" Mitigating Object Dependencies: Improving Point Cloud Self-Supervised Learning through Object Exchange ">
+  <meta name="keywords" content="Self-supervised Learning, RGB-D Point Cloud, Segmentation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Spatiotemporal Self-supervised Learning for Point Clouds in the Wild</title>
 
@@ -69,8 +69,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Spatiotemporal Self-supervised Learning for Point Clouds in the Wild</h1>
-          <h2 class="is-size-2">CVPR 2023</h2>
+          <h1 class="title is-1 publication-title">Mitigating Object Dependencies: Improving Point Cloud Self-Supervised Learning through Object Exchange</h1>
+          <h2 class="is-size-2">CVPR 2024</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://yanhaowu.github.io/">Yanhao Wu</a><sup>1</sup>,
@@ -80,6 +80,9 @@
             </span>
             <span class="author-block">
                 <a href="https://gr.xjtu.edu.cn/en/web/wei.ke/home/">Wei Ke</a><sup>1</sup>,</span>
+            </span>
+              <span class="author-block">
+              <a href="https://congpeiqiu.github.io/">Congpei Qiu</a><sup>2</sup>
             </span>
             <span class="author-block">
               <a href="https://people.epfl.ch/sabine.susstrunk">Sabine Süsstrunk</a><sup>2</sup>
@@ -99,7 +102,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2303.16235.pdf"
+                <a href="https://arxiv.org/pdf/2404.07504.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -108,7 +111,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2303.16235.pdf"
+                <a href="https://arxiv.org/pdf/2404.07504.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -119,7 +122,7 @@
              
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/YanhaoWu/STSSL/"
+                <a href="https://github.com/YanhaoWu/OESSL/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -146,10 +149,19 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-full_width">
         <h2 class="title is-3">Abstract</h2>
-        <img src="static/images/pipeline.png" class="center"/>
+        <img src="static/images/OESSL.jpg" class="center"/>
         <div class="content has-text-justified">
           <p>
-            Self-supervised learning (SSL) has the potential to benefit many applications, particularly those where manually annotating data is cumbersome. One such situation is the semantic segmentation of point clouds. In this context, existing methods employ contrastive learning strategies and define positive pairs by performing various augmentation of point clusters in a single frame. As such, these methods do not exploit the temporal nature of LiDAR data. In this paper, we introduce an SSL strategy that leverages positive pairs in both the spatial and temporal domain. To this end, we design (i) a point-to-cluster learning strategy that aggregates spatial information to distinguish objects; and (ii) a cluster-to-cluster learning strategy based on unsupervised object tracking that exploits temporal correspondences. We demonstrate the benefits of our approach via extensive experiments performed by self-supervised training on two large-scale LiDAR datasets and transferring the resulting models to other point cloud segmentation benchmarks. Our results evidence that our method outperforms the state-of-the-art point cloud SSL methods   </p>
+          In the realm of point cloud scene understanding, particularly in indoor scenes, objects are arranged following human habits, resulting in objects of certain semantics being
+          closely positioned and displaying notable inter-object correlations. This can create a tendency for neural networks
+          to exploit these strong dependencies, bypassing the individual object patterns. To address this challenge, we introduce
+          a novel self-supervised learning (SSL) strategy. Our approach leverages both object patterns and contextual cues
+          to produce robust features. It begins with the formulation of
+          an object-exchanging strategy, where pairs of objects with
+          comparable sizes are exchanged across different scenes, effectively disentangling the strong contextual dependencies.
+          Subsequently, we introduce a context-aware feature learning strategy, which encodes object patterns without relying on their specific context by aggregating object features
+          across various scenes. Our extensive experiments demonstrate the superiority of our method over existing SSL techniques, further showing its better robustness to environmental changes. Moreover, we showcase the applicability of
+          our approach by transferring pre-trained models to diverse point cloud datasets.
         </div>
       </div>
     </div>
@@ -174,12 +186,12 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{wu2023spatiotemporal,
-      author={Wu, Yanhao and Zhang, Tong and Ke, Wei and Süsstrunk, Sabine and Salzmann, Mathieu},
-      title={Spatiotemporal Self-supervised Learning for Point Clouds in the Wild},
-      journal={arXiv preprint arXiv:2303.16235},
-      year={2023}
-    }</code></pre>
+    <pre><code>@article{wu2024mitigating,
+          title={Mitigating Object Dependencies: Improving Point Cloud Self-Supervised Learning through Object Exchange},
+          author={Wu, Yanhao and Zhang, Tong and Ke, Wei and Qiu, Congpei and Susstrunk, Sabine and Salzmann, Mathieu},
+          journal={arXiv preprint arXiv:2404.07504},
+          year={2024}}
+</code></pre>
   </div>
 </section>
 
