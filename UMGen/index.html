@@ -63,89 +63,247 @@
   <script src="./static/js/index.js"></script>
 </head>
 <body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://yanhaowu.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
+
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Generating Multimodal Driving Scenes via Next-Scene Prediction</h1>
+          <h2 class="is-size-2">CVPR 2025</h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yanhaowu.github.io/">Yanhao Wu</a><sup>1, 2</sup>,
+            </span>
+              <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?user=PlMpgeIAAAAJ&hl=zh-CN&oi=ao">Haoyang Zhang</a><sup>2</sup>,
+            </span>
+              <span class="author-block">
+              <a href="https://wzmsltw.github.io/">Tianwei Lin</a><sup>2</sup>,
+            </span>
+              <span class="author-block">
+              <a href="https://www.linkedin.com/in/alanhuang1990/">Lichao Huang</a><sup>2</sup>,
+            </span>
+               <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?user=Z_ZkkbEAAAAJ&hl=zh-CN&oi=ao/">Rui Wu</a><sup>2</sup>,
+            </span>
+              <span class="author-block">
+              <a href="https://congpeiqiu.github.io/">Congpei Qiu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+                <a href="https://gr.xjtu.edu.cn/en/web/wei.ke/home/">Wei Ke</a><sup>1</sup>,</span>
+            </span>
+            <span class="author-block">
+              <a href="https://people.epfl.ch/tong.zhang?lang=en">Tong Zhang</a><sup>3</sup>,
+            </span>
+
+          </div>
+
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Xi'an Jiaotong University</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>Horizon Roboics</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>3</sup>EPFL</span>&nbsp;&nbsp;
+          </div>
+
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Generating Multimodal Driving Scenes via Next-Scene Prediction</h1>
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2303.16235.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+<!--              <span class="link-block">-->
+<!--                <a href="https://arxiv.org/pdf/2303.16235.pdf"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="ai ai-arxiv"></i>-->
+<!--                  </span>-->
+<!--                  <span>arXiv</span>-->
+<!--                </a>-->
+<!--              </span>-->
+
+              <!-- Code Link. -->
+<!--              <span class="link-block">-->
+<!--                <a href="https://github.com/YanhaoWu/STSSL/"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fab fa-github"></i>-->
+<!--                  </span>-->
+<!--                  <span>Code</span>-->
+<!--                  </a>-->
+<!--              </span>-->
+
+
+
+
+            </div>
+
           </div>
         </div>
       </div>
     </div>
-  </section>
-  
-  <section class="section" id="Description" style="margin-bottom: 20px;">
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <!-- <div class="hero-body"> -->
+    <div class="item">
+      <img src="static/Teaser.png" alt="MY ALT TEXT" />
+      <h2 style="font-size: 18px" class="subtitle has-text-centered">
+        <b>Functions of our UMGen.
+          <!-- <br> -->
+        </b> (a) Starting from a random initialization, UMGen generates ego-centric, multimodal scenes frame-by-frame. Each scene encompasses four modalities: ego-vehicle action, map, traffic
+agent, and image. (b) UMGen offers multiple functions. It can not only imagine multimodal scene sequences freely but can also predict
+the other multimodalities based on input ego-vehicle actions. Furthermore, UMGen can incorporate user-specified agent actions to create
+customized scene sequences. In three scene sequences, arranged from top to bottom, we demonstrate the ego vehicle autonomously driving
+straight through an intersection, executing a user-defined right turn, and encountering scenes where a user-specified white car cuts in front
+of the ego vehicle. For a better visualization, a portion of the map corresponding to the user-specified scenario is zoomed in.</h2>
+    </div>
+  </div>
+</section>
+
+
+  <section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+<!--        <img src="static/Teaser.png" class="center"/>-->
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Generative models in Autonomous Driving (AD) enable diverse scenario creation, yet existing methods fall short by only capturing a limited range of modalities, restricting the capability of generating controllable scenarios for comprehensive evaluation of AD systems. In this paper, we introduce a multimodal generation framework that incorporates four major data modalities, including a novel addition of map modality. With tokenized modalities, our scene sequence generation framework autoregressively predicts each scene while managing computational demands through a two-stage approach. The Temporal AutoRegressive (TAR) component captures inter-frame dynamics for each modality while the Ordered AutoRegressive (OAR) component aligns modalities within each scene by sequentially predicting tokens in a fixed order. To maintain coherence between map and ego-action modalities, we introduce the Action-aware Map Alignment (AMA) module, which applies a transformation based on the ego-action to maintain coherence between these modalities. Our framework effectively generates complex, realistic driving scenarios over extended sequences, ensuring multimodal consistency and offering fine-grained control over scenario elements.        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .hero {
+    margin-left: 20px; /* 添加左边距 */
+  }
+</style>
+<!-- Image carousel -->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <!-- <div class="hero-body"> -->
+    <div class="item">
+      <img src="static/method.png" alt="MY ALT TEXT" />
+      <h2 style="font-size: 18px" class="subtitle has-text-centered">
+        <b>Pipeline of our UMGen.
+          <!-- <br> -->
+        </b> </h2>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+
+
+
+
+
+
+
+<section class="section" id="Results" style="margin-top: -10px;"> <!-- 使用负 margin -->
     <div class="container is-max-desktop content">
+    <section class="hero method">
+      <div class="container is-max-desktop">
+        <div class="hero-body" style="font-size: 1.3em; line-height: 1.4;">
+          <p style="text-indent: 7px; margin-bottom: 10px;">
+            UMGen offers multiple functions:
+          </p>
+          <ul style="padding-left: 30px; list-style-type: disc; margin-bottom: 10px;">
+            <li>
+              It can imagine multimodal driving scene sequences freely.
+            </li>
+            <li>
+              It can predict other multimodalities based on input ego-vehicle actions.
+            </li>
+            <li>
+              It can incorporate user-specified agent actions to create customized scene sequences.
+            </li>
+          </ul>
+          <p style="text-indent: 0px; margin-bottom: 10px;">
+            We provide visualizations and a video demonstration showcasing UMGen's autoregressive scenario generation capabilities.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="container is-max-desktop content">
+    <h2 class="title" style="margin-bottom: 20px;">1. Driving Scenario Generation</h2>
+    <div>
+      <h3 class="subtitle" style="margin-bottom: 10px;">A. Long-duration Driving Scenario Generation</h3>
       <section class="hero method">
         <div class="container is-max-desktop">
-          <div class="hero-body" style="font-size: 1.5em; line-height: 1.8;">  
-            <p style="text-indent: 5px;">
-              UMGen offers multiple functions:
-            </p>
-            <ul style="padding-left: 50px; list-style-type: disc;">
-              <li>
-                It can imagine multimodal driving scene sequences freely.
-              </li>
-              <li>
-                It can predict other multimodalities based on input ego-vehicle actions.
-              </li>
-              <li>
-                It can incorporate user-specified agent actions to create customized scene sequences.
-              </li>
-            </ul>
-            <p style="text-indent: 0px;">
-              We present such visualizations here. Additionally, we provide a video demonstration to showcase UMGen's autoregressive scenario generation capabilities.
-            </p>
+          <div class="hero-body" style="padding-top: 0;">
+            <video preload="auto" id="tree-long" autoplay controls muted loop style="width: 100%; max-width: 1600px;">
+              <source src="./static/videos_example/1_Generated_Scenes/A_Generated_Long_Scenes/meraged_videos.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
       </section>
     </div>
-  </section>
-  
-  <section class="section" id="Results" style="margin-top: 0;">
-    <div class="container is-max-desktop content">
-      <h2 class="title" style="margin-bottom: 20px;">1. Driving Scenario Generation</h2> 
-      
-      <div>
-        <h4 class="subtitle" style="margin-bottom: 10px;">A. Long-duration Driving Scenario Generation</h3> 
-        <section class="hero method">
-          <div class="container is-max-desktop">
-            <div class="hero-body" style="padding-top: 0;">  
-              <div class="container is-max-desktop">
-                <video preload="auto" poster="" id="tree" autoplay controls muted loop style="width: 100%; max-width: 1600px;"> 
-                  <source src=".\static\videos_example\1_Generated_Scenes\A_Generated_Long_Scenes\meraged_videos.mp4" type="video/mp4">
-                </video>
-              </div> 
-            </div>
+
+    <div>
+      <h3 class="subtitle" style="margin-bottom: 10px;">B. Diverse Driving Scenario Generation</h3>
+      <section class="hero method">
+        <div class="container is-max-desktop">
+          <div class="hero-body" style="padding-top: 0;">
+            <video preload="auto" id="tree-diverse" autoplay controls muted loop style="width: 100%; max-width: 1600px;">
+              <source src="./static/videos_example/1_Generated_Scenes/B_Generated_Diverse_Scenes/Diverse_video.mp4" type="video/mp4">
+            </video>
           </div>
-        </section>
-      </div>
-  
-      <div style="margin-top: 40px;"> 
-        <h4 class="subtitle" style="margin-bottom: 10px;">B. Diverse Driving Scenario Generation</h3> 
-        <section class="hero method">
-          <div class="container is-max-desktop">
-            <div class="hero-body" style="padding-top: 0;">  
-              <div class="container is-max-desktop">
-                <video preload="auto" poster="" id="tree" autoplay controls muted loop style="width: 100%; max-width: 1600px;"> 
-                  <source src=".\static\videos_example\1_Generated_Scenes\B_Generated_Diverse_Scenes\Diverse_video.mp4" type="video/mp4">
-                </video>
-              </div> 
-            </div>
-          </div>
-        </section>
-      </div>
-  
+        </div>
+      </section>
     </div>
-  </section>
+  </div>
+</section>
   
 
 
 
 
-  <section class="section" id="Results" style="margin-top: 0;">
+  <section class="section" id="Results2" style="margin-top: 0;">
     <div class="container is-max-desktop content">
       <h2 class="title" style="margin-bottom: 10px;">2. Interactive Ego-vehicle Control</h2> 
       <section class="hero method">
@@ -172,7 +330,7 @@
 </section>
 
 
-<section class="section" id="Results" style="margin-top: 0;">
+<section class="section" id="Results3" style="margin-top: 0;">
   <div class="container is-max-desktop content">
     <h2 class="title" style="margin-bottom: 15px;">3. User-Specified Scenario Generation</h2>
     
@@ -195,7 +353,7 @@
 
 
 
-<section class="section" id="Results" style="margin-top: 0;">
+<section class="section" id="Results4" style="margin-top: 0;">
   <div class="container is-max-desktop content">
     <h2 class="title" style="margin-bottom: 15px;">4. Demonstration of Autoregressive Scenario Generation by UMGen</h2>
     <section class="hero method">
