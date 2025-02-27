@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Generating Multimodal Driving Scenes via Next-Scene Prediction">
+  <meta name="keywords" content="DriveDreamer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generating Multimodal Driving Scenes via Next-Scene Prediction</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/ms_icon.png">
+
+  <style>  
+    table {  
+      font-family: arial, sans-serif;  
+      border-collapse: collapse;  
+      width: 100%;  
+    }  
+      
+    td, th {  
+      border: 2px solid #F1F4F5;  
+      text-align: left;  
+      padding: 8px;  
+    }  
+    tr:nth-child(3n - 1) {  
+      background-color: #F1F4F5;  
+    }  
+
+    tr:nth-child(3n) {  
+      border: 2px solid #FFFFFF;
+    }  
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Generating Multimodal Driving Scenes via Next-Scene Prediction</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section" id="Description" style="margin-bottom: 20px;">
+    <div class="container is-max-desktop content">
+      <section class="hero method">
+        <div class="container is-max-desktop">
+          <div class="hero-body" style="font-size: 1.5em; line-height: 1.8;">  
+            <p style="text-indent: 5px;">
+              UMGen offers multiple functions:
+            </p>
+            <ul style="padding-left: 50px; list-style-type: disc;">
+              <li>
+                It can imagine multimodal driving scene sequences freely.
+              </li>
+              <li>
+                It can predict other multimodalities based on input ego-vehicle actions.
+              </li>
+              <li>
+                It can incorporate user-specified agent actions to create customized scene sequences.
+              </li>
+            </ul>
+            <p style="text-indent: 0px;">
+              We present such visualizations here. Additionally, we provide a video demonstration to showcase UMGen's autoregressive scenario generation capabilities.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+  
+  <section class="section" id="Results" style="margin-top: 0;">
+    <div class="container is-max-desktop content">
+      <h2 class="title" style="margin-bottom: 20px;">1. Driving Scenario Generation</h2> 
+      
+      <div>
+        <h4 class="subtitle" style="margin-bottom: 10px;">A. Long-duration Driving Scenario Generation</h3> 
+        <section class="hero method">
+          <div class="container is-max-desktop">
+            <div class="hero-body" style="padding-top: 0;">  
+              <div class="container is-max-desktop">
+                <video preload="auto" poster="" id="tree" autoplay controls muted loop style="width: 100%; max-width: 1600px;"> 
+                  <source src=".\static\videos_example\1_Generated_Scenes\A_Generated_Long_Scenes\meraged_videos.mp4" type="video/mp4">
+                </video>
+              </div> 
+            </div>
+          </div>
+        </section>
+      </div>
+  
+      <div style="margin-top: 40px;"> 
+        <h4 class="subtitle" style="margin-bottom: 10px;">B. Diverse Driving Scenario Generation</h3> 
+        <section class="hero method">
+          <div class="container is-max-desktop">
+            <div class="hero-body" style="padding-top: 0;">  
+              <div class="container is-max-desktop">
+                <video preload="auto" poster="" id="tree" autoplay controls muted loop style="width: 100%; max-width: 1600px;"> 
+                  <source src=".\static\videos_example\1_Generated_Scenes\B_Generated_Diverse_Scenes\Diverse_video.mp4" type="video/mp4">
+                </video>
+              </div> 
+            </div>
+          </div>
+        </section>
+      </div>
+  
+    </div>
+  </section>
+  
+
+
+
+
+  <section class="section" id="Results" style="margin-top: 0;">
+    <div class="container is-max-desktop content">
+      <h2 class="title" style="margin-bottom: 10px;">2. Interactive Ego-vehicle Control</h2> 
+      <section class="hero method">
+        <div class="container is-max-desktop">
+          <div class="hero-body" style="padding-top: 0;"> 
+            <h4 class="subtitle" style="margin-top: 0px; margin-bottom: 10px;">A. We control the ego-vehicle to either drive straight or make a right turn at the intersection.</h4>
+          <div class="container is-max-desktop" style="display: flex; justify-content: center;"> 
+            <video preload="auto" poster="" id="tree" autoplay controls muted loop style="width: 60%; max-width: 800px; outline: 5px;"> 
+              <source src=".\static\videos_example\2_Ego_Control\A_Intersection\combined_video.mp4" type="video/mp4">
+            </video>
+          </div> 
+
+          <h4 class="title" style="margin-top: 70px;">B. We control the ego-vehicle to either wait behind the agent or execute a lane change to overtake.</h4>
+          <div class="container is-max-desktop" style="display: flex; justify-content: center;"> 
+            <video preload="auto" poster="" id="tree" autoplay controls muted loop style="width: 60%; max-width: 800px; outline: 5px;"> 
+              <source src=".\static\videos_example\2_Ego_Control\B_Waiting\combined_video.mp4" type="video/mp4">
+            </video>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+
+<section class="section" id="Results" style="margin-top: 0;">
+  <div class="container is-max-desktop content">
+    <h2 class="title" style="margin-bottom: 15px;">3. User-Specified Scenario Generation</h2>
+    
+    <section class="hero method">
+      <h4 class="title" style="margin-top: 7px;"> We can control the agent to simulate a cut-in maneuver scenario. The ego-vehicle brakes or executes a controlled lane change to avoid a collision.</h4>
+      <div class="container is-max-desktop">
+        <div class="hero-body" style="padding-top: 0;">  
+          <div class="container is-max-desktop">
+            <video preload="auto"poster="" id="tree" autoplay controls muted loop width="12000px" outline="0px"> 
+              <source src=".\static\videos_example\3_User_Specified_Scenario_Generation\control.mp4"
+              type="video/mp4">
+            </video>
+        </div> 
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+
+
+
+<section class="section" id="Results" style="margin-top: 0;">
+  <div class="container is-max-desktop content">
+    <h2 class="title" style="margin-bottom: 15px;">4. Demonstration of Autoregressive Scenario Generation by UMGen</h2>
+    <section class="hero method">
+      <h4 class="title" style="margin-top: 7px;">  UMGen autoregressively generates ego-centric, multimodal scenes frame-by-frame </h4>
+      <div class="container is-max-desktop">
+        <div class="hero-body" style="padding-top: 0; display: flex; justify-content: center;">  
+          <div class="container is-max-desktop" style="text-align: center;">
+            <video preload="auto" poster="" id="tree" autoplay controls muted loop style="width: 60%; max-width: 800px; outline: 5px;"> 
+              <source src=".\static\videos_example\4_Example_AR\AR_example.mp4" type="video/mp4">
+            </video>
+          </div> 
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+
+
+
+
+  </div></div></section>
+  </div>
+</section>
+
+
+</body>
+</html>
