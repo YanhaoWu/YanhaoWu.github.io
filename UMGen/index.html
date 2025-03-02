@@ -324,6 +324,23 @@ customized scene sequences.</h2>
   .hero {
     margin-left: 20px; /* 添加左边距 */
   }
+    .fade {
+      opacity: 0.5;
+      transition: opacity 0.5s;
+    }
+    .fade.active {
+      opacity: 1;
+    }
+    .video-controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .video-controls button {
+      padding: 8px 16px;
+      margin: 0 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
 </style>
 <!-- Image carousel -->
 
@@ -490,26 +507,55 @@ customized scene sequences.</h2>
                               <br> <br>
           E. <span style="font-weight: bold;">Incorporating a Diffusion Decoder </span>
       </div>
-    <section class="hero method">
+
+
+
+<section class="hero method">
     <div class="container is-max-desktop">
         <div class="hero-body" style="padding-top: 0; display: flex; flex-direction: column; align-items: center;">
-            <video preload="auto" id="tree-long" autoplay controls muted loop
-                style="width: 80%; max-width: 1600px;">
-              <source src=".\static\videos_example\5_Diffusion\compare_diffusion_converted.mp4" type="video/mp4">
+
+            <!-- 视频容器 -->
+            <video id="videoPlayer" preload="auto" autoplay controls muted loop style="width: 100%; max-width: 1600px;">
+                <source src="./static/videos_example/5_Diffusion/6.mp4" type="video/mp4">
+                您的浏览器不支持 video 标签。
             </video>
-            <figcaption style="font-size: 18px; margin-top: 5px; text-align: center;">
-          We train a transformer-based diffusion model to further improve the quality of generated videos, leading to higher resolution, better visual clarity, and enhanced overall realism.
-              <br>   <span style="font-weight: bold;"> Left </span>: Origin UMGen-generated video, <span style="font-weight: bold;">Right</span>: Diffusion-refined UMGen-generated video.
+
+            <!-- 切换按钮 -->
+            <div style="margin-top: 10px; display: flex; gap: 10px;">
+                <button onclick="changeVideo('./static/videos_example/5_Diffusion/1.mp4')">Scene 1</button>
+                <button onclick="changeVideo('./static/videos_example/5_Diffusion/2.mp4')">Scene 2</button>
+                <button onclick="changeVideo('./static/videos_example/5_Diffusion/3.mp4')">Scene 3</button>
+                <button onclick="changeVideo('./static/videos_example/5_Diffusion/4.mp4')">Scene 4</button>
+                <button onclick="changeVideo('./static/videos_example/5_Diffusion/5.mp4')">Scene 5</button>
+                <button onclick="changeVideo('./static/videos_example/5_Diffusion/6.mp4')">Scene 6</button>
+            </div>
+
+            <!-- 描述 -->
+            <figcaption style="font-size: 18px; margin-top: 20px; text-align: center;">
+                We train a transformer-based diffusion model to further improve the quality of generated videos, leading to higher resolution, better visual clarity, and enhanced overall realism.
+                <br>
+                <span style="font-weight: bold;">Left</span>: Origin UMGen-generated video, <span style="font-weight: bold;">Right</span>: Diffusion-refined UMGen-generated video.
             </figcaption>
         </div>
     </div>
-    </section>
+</section>
+
+<script>
+    // JavaScript 函数：切换视频源
+    function changeVideo(src) {
+        const videoPlayer = document.getElementById('videoPlayer');
+        videoPlayer.pause(); // 暂停当前视频
+        videoPlayer.currentTime = 0; // 重置播放时间
+        videoPlayer.src = src; // 设置新的视频源
+        videoPlayer.play(); // 播放新视频
+    }
+</script>
 
 
-
-
-
-
+<!--            <video preload="auto" id="tree-long" autoplay controls muted loop-->
+<!--                style="width: 80%; max-width: 1600px;">-->
+<!--              <source src=".\static\videos_example\5_Diffusion\0.mp4" type="video/mp4">-->
+<!--            </video>-->
 
 
   </div></div></section>
