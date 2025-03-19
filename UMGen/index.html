@@ -360,14 +360,19 @@ customized scene sequences.</h2>
         including ego-action, maps, traffic agents, and images at each scene, each modality is tokenized into discrete tokens.
         The token embeddings are then processed through the Ego-action Prediction module, which forecasts the ego-action
         for T+1 time step. Using this predicted ego-action, the AMA module adjusts the map features.
-        Finally, the TAR module aggregates temporal information across sequences, while the OAR module ensures sequential
+        Next, the TAR module aggregates temporal information across sequences, while the OAR module ensures sequential
         prediction within each frame by autoregressively generating each token conditioned on the aggregated history information.
-        The predicted tokens are fed to the decoder to obtain the next scene.</h2>
+        Finally, the predicted tokens are fed to the decoder to obtain the next scene.</h2>
     </div>
   </div>
 </section>
 <!-- End image carousel -->
 
+<style>
+  #Method {
+    margin-top: 60px; /* 根据需要调整间距大小 */
+  }
+</style>
 
 
 <section class="section" id="Results"> <!-- 使用负 margin -->
@@ -521,16 +526,16 @@ customized scene sequences.</h2>
 
             <!-- 视频容器 -->
             <video id="videoPlayer" preload="auto" autoplay controls muted loop style="width: 100%; max-width: 1600px;">
-                <source src="./static/videos_example/5_Diffusion/1.mp4" type="video/mp4">
+                <source src="./static/videos_example/5_Diffusion/4.mp4" type="video/mp4">
                 您的浏览器不支持 video 标签。
             </video>
 
             <!-- 切换按钮 -->
             <div style="margin-top: 10px; display: flex; gap: 10px;">
-                <button onclick="changeVideo('./static/videos_example/5_Diffusion/1.mp4')">Scene 1</button>
+                <button onclick="changeVideo('./static/videos_example/5_Diffusion/4.mp4')">Scene 1</button>
                 <button onclick="changeVideo('./static/videos_example/5_Diffusion/2.mp4')">Scene 2</button>
                 <button onclick="changeVideo('./static/videos_example/5_Diffusion/3.mp4')">Scene 3</button>
-                <button onclick="changeVideo('./static/videos_example/5_Diffusion/4.mp4')">Scene 4</button>
+                <button onclick="changeVideo('./static/videos_example/5_Diffusion/1.mp4')">Scene 4</button>
                 <button onclick="changeVideo('./static/videos_example/5_Diffusion/5.mp4')">Scene 5</button>
 <!--                <button onclick="changeVideo('./static/videos_example/5_Diffusion/6.mp4')">Scene 6</button>-->
             </div>
