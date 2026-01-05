@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="AlignDrive: Aligned Lateral-Longitudinal Planning for End-to-End Autonomous Driving">
+  <meta name="keywords" content="AlignDrive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlignDrive: Aligned Lateral-Longitudinal Planning for End-to-End Autonomous Driving  </title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/ms_icon.png">
+
+  <style>  
+    table {  
+      font-family: arial, sans-serif;  
+      border-collapse: collapse;  
+      width: 100%;  
+    }  
+      
+    td, th {  
+      border: 2px solid #F1F4F5;  
+      text-align: left;  
+      padding: 8px;  
+    }  
+    tr:nth-child(3n - 1) {  
+      background-color: #F1F4F5;  
+    }  
+
+    tr:nth-child(3n) {  
+      border: 2px solid #FFFFFF;
+    }  
+
+    .video-container {
+      width: 450px;   
+      height: auto;   
+    }
+    .video-small {
+      width: 300px;   
+      height: auto;   
+    }
+    .video-Teaser {
+      width: 800px;   
+      height: auto;   
+    }
+
+    .video-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    margin: 50px 0;          
+  }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+  <section class="hero">
+    <section id="People_and_Teaser">
+  
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              <span style="white-space: nowrap;"> AlignDrive: Aligned Lateral-Longitudinal Planning <br></span>
+              <span style="white-space: nowrap;">for End-to-End Autonomous Driving</span>
+            </h1>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://yanhaowu.github.io/">Yanhao Wu</a><sup>1, 2</sup>,
+              </span>
+                <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?user=PlMpgeIAAAAJ&hl=zh-CN&oi=ao">Haoyang Zhang</a><sup>2</sup>,
+              </span>
+                <span class="author-block">
+                <a href="https://scholar.google.com/citations?hl=en&user=hJTL8ScAAAAJ/">Fei He</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?user=Z_ZkkbEAAAAJ&hl=zh-CN&oi=ao/">Rui Wu</a><sup>2</sup>,
+              </span>
+                <span class="author-block">
+                <a href="https://congpeiqiu.github.io/">Congpei Qiu</a><sup>1, 3</sup>,
+              </span>
+              </span>
+              <span class="author-block">
+              <a href="https://github.com/GaoLianger/">Liang Gao</a><sup>1</sup>,
+            </span>
+              <span class="author-block">
+                  <a href="https://gr.xjtu.edu.cn/en/web/wei.ke/home/">Wei Ke</a><sup>1</sup>,</span>
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=kCy8JG8AAAAJ&hl=en&oi=ao">Tong Zhang</a><sup>4</sup>,
+              </span>
+  
+            </div>
+  
+  
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Xi'an Jiaotong University</span>&nbsp;&nbsp;
+              <span class="author-block"><sup>2</sup>Horizon Robotics</span>&nbsp;&nbsp;
+              <span class="author-block"><sup>3</sup>Shenzhen Loop Area Institute</span>&nbsp;&nbsp;
+              <span class="author-block"><sup>4</sup>University of Chinese Academy of Sciences</span>&nbsp;&nbsp;
+            </div>
+  
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2503.14945"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+  
+  
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/YanhaoWu/AlignDrive"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                </span>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container content">
+    <section class="hero method">
+      <div class="container content" style="max-width: 1150px;">
+        <div class="hero-body" style="font-size: 1.5em; line-height: 1.8;">
+          <p style="text-indent: 5px;">
+          We develop an end-to-end driving framework, AlignDrive, that tightly couples lateral and longitudinal planning and enables effective planning-oriented data augmentation. On this page, we show that AlignDrive:
+          </p>
+          <ul style="padding-left: 0; margin-left: 50px; list-style-type: disc;">
+            <li>Demonstrates comprehensive capability in handling diverse driving scenarios.</li>
+            <li>Exhibits superior longitudinal planning in challenging, safety-critical situations.</li>
+            <li>Demonstrates superior lateral planning and obstacle avoidance performance.</li>
+            <li>Outperforms the baseline that performs independent lateral and longitudinal planning.</li>
+          </ul>
+          <p style="font-size: 0.9em; color: #444; margin-top: 10px;">
+            For videos, the <span style="color: red; font-weight: bold;">red curve</span> indicates the predicted drive path, 
+            while the <span style="color: blue; font-weight: bold;">blue curve</span> corresponds to the predicted longitudinal displacement sequence along this drive path.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  
+
+  <!-- <div style="height:10px;"></div> -->
+
+  <div class="container content" style="max-width: 900px;">
+    <h2 class="title is-2">A. Comprehensive capabilities of AlignDrive</h2>
+  </div>
+
+  <div class="video-wrapper" style="margin: 0 auto; width: 80%; max-width: 1000px;">
+    <video class="video-Teaser" controls autoplay muted loop playsinline 
+           style="width: 100%; height: auto; border-radius: 12px;">
+      <source src="./static/videos/Teaser_video/AlignDrive.mp4" type="video/mp4">
+    </video>
+  </div>
+  
+  <div style="height:100px;"></div>
+
+  <div class="container fixed-width">
+    <div class="container content" style="max-width: 900px;">
+      <h2 class="title is-2">B. Closed loop evaluation in different scenarios</h2>  
+    </div>
+    <div style="height: 50px;"></div>
+  
+    <div style="height: 10px;"></div>
+    <div class="columns is-centered is-vcentered" style="gap: 50px;"> 
+
+      <div class="column is-narrow has-text-centered">
+        <h3 class="title is-4">Vehicle Turning Route</h3>
+        <div class="content">
+          <video class="video-container" autoplay controls muted loop playsinline>
+            <source src="./static/videos/Scenes/RouteScenario_11381_rep0_Town12_VehicleTurningRoutePedestrian.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    
+      <div class="column is-narrow has-text-centered">
+        <h3 class="title is-4">Pedestrian Crossing</h3>
+        <div class="content">
+          <video class="video-container" autoplay controls muted loop playsinline>
+            <source src="./static/videos/Scenes/RouteScenario_14194_rep0_Town12_PedestrianCrossing.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    
+  
+    <div style="height: 10px;"></div>
+    <div class="columns is-centered is-vcentered" style="gap: 50px;">
+      <div class="column is-narrow has-text-centered">
+        <h3 class="title is-4">Opposite Vehicle Running Red Light</h3>
+        <div class="content">
+          <video class="video-container" autoplay controls muted loop playsinline>
+            <source src="static/videos/Scenes/RouteScenario_26944_rep0_Town04_OppositeVehicleRunningRedLight.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-narrow has-text-centered">
+        <h3 class="title is-4">Enter ActorFlow</h3>
+        <div class="content">
+          <video class="video-container" autoplay controls muted loop playsinline>
+            <source src="static/videos/Scenes/RouteScenario_11715_rep0_Town12_EnterActorFlow.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    
+    <div style="height: 10px;"></div>
+    <div class="columns is-centered is-vcentered" style="gap: 50px;">
+      <div class="column is-narrow has-text-centered">
+        <h3 class="title is-4">Construction Obstacle</h3>
+        <div class="content">
+          <video class="video-container" autoplay controls muted loop playsinline>
+            <source src="static/videos/Scenes/RouteScenario_24795_rep0_Town04_ConstructionObstacle.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-narrow has-text-centered">
+        <h3 class="title is-4">Parked Obstacle Two-Ways</h3>
+        <div class="content">
+          <video class="video-container" autoplay controls muted loop playsinline>
+            <source src="static/videos/Scenes/RouteScenario_2664_rep0_Town12_ParkedObstacleTwoWays.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+
+
+  <div style="height:150px;"></div>
+
+
+  <div class="container fixed-width">
+    <div class="container content" style="max-width: 900px;">
+      <h2 class="title is-2">C. Qualitative comparison with the baseline</h2>  
+      <div style="height: 3px;"></div>
+      <p class="subtitle is-5"> We provide a qualitative comparison between AlignDrive and the baseline. The baseline follows previous SOTA: planning lateral and longitudinal in parallel, without path-conditioned longitudinal planning or data augmentation; details are provided in the paper.</p>
+      <p class="subtitle is-5"> Compared to this baseline on the Bench2Drive benchmark, AlignDrive improves the driving score from 83.21 to 89.07, raises the success rate from 63.18% to 73.18%, and substantially reduces collision rates. </p>  
+
+    </div>
+
+    <div style="height: 30px;"></div>
+  <div style="height: 30px;"></div>
+<div class="container background-container">
+  <h3 class="title is-4 has-text-centered">Route 2115: Non-Signalized Junction Right Turn</h3>
+  <div class="columns is-centered is-vcentered" style="gap:50px;">
+    <div class="column is-narrow has-text-centered">
+      <p class="title is-6">Baseline: Collision with vehicles</p>
+      <video class="video-small" preload="auto" autoplay controls muted loop>
+        <source src="./static/videos/Compare/BaseLine_2115.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="column is-narrow has-text-centered">
+      <p class="title is-6">AlignDrive: Success</p>
+      <video class="video-small" preload="auto" autoplay controls muted loop>
+        <source src="./static/videos/Compare/Ours_2115.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+<div style="height:50px;"></div>
+<div class="container background-container">
+  <h3 class="title is-4 has-text-centered">Route 2606: Construction Obstacle Two-Ways</h3>
+  <div class="columns is-centered is-vcentered" style="gap:50px;">
+    <div class="column is-narrow has-text-centered">
+      <p class="title is-6">Baseline: Collision with vehicles</p>
+      <video class="video-small" preload="auto" autoplay controls muted loop>
+        <source src="./static/videos/Compare/BaseLine_2606.MP4" type="video/mp4">
+      </video>
+    </div>
+    <div class="column is-narrow has-text-centered">
+      <p class="title is-6">AlignDrive: Success</p>
+      <video class="video-small" preload="auto" autoplay controls muted loop>
+        <source src="./static/videos/Compare/Ours_2606.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+<div style="height:50px;"></div>
+<div class="container background-container">
+  <h3 class="title is-4 has-text-centered">Route 26944: Opposite Vehicle Running RedLight</h3>
+  <div class="columns is-centered is-vcentered" style="gap:50px;">
+    <div class="column is-narrow has-text-centered">
+      <p class="title is-6">Baseline: Collision with vehicles</p>
+      <video class="video-small" preload="auto" autoplay controls muted loop>
+        <source src="./static/videos/Compare/BaseLine_26944.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="column is-narrow has-text-centered">
+      <p class="title is-6">AlignDrive: Success</p>
+      <video class="video-small" preload="auto" autoplay controls muted loop>
+        <source src="./static/videos/Compare/Ours_26944.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+<div style="height:50px;"></div>
+<div class="container background-container">
+  <h3 class="title is-4 has-text-centered">Route 27582: Pedestrian Crossing</h3>
+  <div class="columns is-centered is-vcentered" style="gap:50px;">
+    <div class="column is-narrow has-text-centered">
+      <p class="title is-6">Baseline: Collision with pedestrians</p>
+      <video class="video-small" preload="auto" autoplay controls muted loop>
+        <source src="./static/videos/Compare/BaseLine_27582.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="column is-narrow has-text-centered">
+      <p class="title is-6">AlignDrive: Success</p>
+      <video class="video-small" preload="auto" autoplay controls muted loop>
+        <source src="./static/videos/Compare/Ours_27582.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+
+
+
+  </div></div></section>
+  </div>
+</section>
+
+
+</body>
+</html>
